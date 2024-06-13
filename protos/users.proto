@@ -21,7 +21,7 @@ message Void {}
 message User {
     string id        = 1;
     string user_name = 2;
-    string emai      = 3;
+    string email      = 3;
     string password  = 4;
 }
 

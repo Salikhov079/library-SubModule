@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "genprotos/";
+
+package protos;
+
+import "users.proto";
+
+service GenderService {
+    rpc CreateGender(Gender) returns (Void) {}
+    rpc UpdateGender(Gender) returns(Void){}
+    rpc DeleteGender(ById) returns (Void) {}
+    rpc GetByIdGender(ById) returns (Gender) {}
+    rpc GetAllGenders(Gender) returns (AllGenders){}
+}
+
+message Gender {
+    string id   = 1;
+    string name = 2;
+}
+
+message AllGenders {
+    repeated Gender genders = 1;
+}

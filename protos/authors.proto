@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "genprotos/";
+
+package protos;
+
+import "users.proto";
+
+service AuthorService {
+    rpc CreateAuthor(Author) returns (Void) {}
+    rpc UpdateAuthor(Author) returns(Void){}
+    rpc DeleteAuthor(ById) returns (Void) {}
+    rpc GetByIdAuthor(ById) returns (Author) {}
+    rpc GetAllAuthors(Author) returns (AllAuthors){}
+}
+
+message Author {
+    string id        = 1;
+    string name      = 2;
+    string biography = 3;
+}
+
+message AllAuthors {
+    repeated Author authors = 1;
+}

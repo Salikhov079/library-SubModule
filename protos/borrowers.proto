@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "genprotos/";
+
+package protos;
+
+import "users.proto";
+import "books.proto";
+
+
+service BorrowerService {
+    rpc CreateBorrower(Borrower) returns (Void) {}
+    rpc UpdateBorrower(Borrower) returns(Void){}
+    rpc DeleteBorrower(ById) returns (Void) {}
+    rpc GetByIdBorrower(ById) returns (Borrower) {}
+    rpc GetAllBorrowers(Borrower) returns (AllBorrowers){}
+}
+
+message Borrower {
+    string id          = 1;
+    User   user        = 2;
+    Book   book        = 3;
+    string borrow_date = 4; 
+    string return_date = 5;
+}
+
+message AllBorrowers {
+    repeated Borrower borrowers = 1;
+}

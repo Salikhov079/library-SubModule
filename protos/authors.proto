@@ -7,7 +7,7 @@ package protos;
 import "users.proto";
 
 service AuthorService {
-    rpc CreateAuthor(AuthorReqr) returns (Void) {}
+    rpc CreateAuthor(AuthorReq) returns (Void) {}
     rpc UpdateAuthor(AuthorReq) returns(Void){}
     rpc DeleteAuthor(ById) returns (Void) {}
     rpc GetByIdAuthor(ById) returns (AuthorRes) {}

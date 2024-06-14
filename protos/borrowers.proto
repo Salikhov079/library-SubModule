@@ -24,11 +24,11 @@ message BorrowerReq {
 }
 
 message BorrowerRes {
-    string id          = 1;
-    User   user        = 2;
-    Book   book        = 3;
-    string borrow_date = 4; 
-    string return_date = 5;
+    string  id          = 1;
+    UserRes user        = 2;
+    BookRes book        = 3;
+    string  borrow_date = 4; 
+    string  return_date = 5;
 }
 
 message AllBorrowers {

@@ -23,11 +23,11 @@ message BookReq {
 }
 
 message BookRes {
-    string id      = 1;
-    string title   = 2;
-    Author author  = 3;
-    string genre   = 4; 
-    string summary = 5;
+    string    id      = 1;
+    string    title   = 2;
+    AuthorRes author  = 3;
+    string    genre   = 4; 
+    string    summary = 5;
 }
 
 message AllBooks {

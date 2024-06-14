@@ -6,7 +6,7 @@ package protos;
 
 service UserService {
     rpc CreateUser(UserReq) returns (Void) {}
-    rpc UpdateUser(UserReq) returns(Void){}
+    rpc UpdateUser(UserRes) returns(Void){}
     rpc DeleteUser(ById) returns (Void) {}
     rpc GetByIdUser(ById) returns (UserRes) {}
     rpc GetAllUsers(UserReq) returns (AllUsers){}

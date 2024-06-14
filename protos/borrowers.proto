@@ -9,14 +9,21 @@ import "books.proto";
 
 
 service BorrowerService {
-    rpc CreateBorrower(Borrower) returns (Void) {}
-    rpc UpdateBorrower(Borrower) returns(Void){}
+    rpc CreateBorrower(BorrowerReq) returns (Void) {}
+    rpc UpdateBorrower(BorrowerReq) returns(Void){}
     rpc DeleteBorrower(ById) returns (Void) {}
-    rpc GetByIdBorrower(ById) returns (Borrower) {}
-    rpc GetAllBorrowers(Borrower) returns (AllBorrowers){}
+    rpc GetByIdBorrower(ById) returns (BorrowerRes) {}
+    rpc GetAllBorrowers(BorrowerReq) returns (AllBorrowers){}
 }
 
-message Borrower {
+message BorrowerReq {
+    string user_id     = 2;
+    string book_id     = 3;
+    string borrow_date = 4; 
+    string return_date = 5;
+}
+
+message BorrowerRes {
     string id          = 1;
     User   user        = 2;
     Book   book        = 3;
@@ -25,5 +32,5 @@ message Borrower {
 }
 
 message AllBorrowers {
-    repeated Borrower borrowers = 1;
+    repeated BorrowerRes borrowers = 1;
 }

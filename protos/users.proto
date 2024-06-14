@@ -5,11 +5,11 @@ option go_package = "genprotos/";
 package protos;
 
 service UserService {
-    rpc CreateUser(User) returns (Void) {}
-    rpc UpdateUser(User) returns(Void){}
+    rpc CreateUser(UserReq) returns (Void) {}
+    rpc UpdateUser(UserReq) returns(Void){}
     rpc DeleteUser(ById) returns (Void) {}
-    rpc GetByIdUser(ById) returns (User) {}
-    rpc GetAllUsers(User) returns (AllUsers){}
+    rpc GetByIdUser(ById) returns (UserRes) {}
+    rpc GetAllUsers(UserReq) returns (AllUsers){}
 }
 
 message ById {
@@ -18,7 +18,13 @@ message ById {
 
 message Void {}
 
-message User {
+message UserReq {
+    string user_name = 2;
+    string email     = 3;
+    string password  = 4;
+}
+
+message UserRes {
     string id        = 1;
     string user_name = 2;
     string email     = 3;
@@ -26,5 +32,5 @@ message User {
 }
 
 message AllUsers {
-    repeated User users = 1;
+    repeated UserRes users = 1;
 }

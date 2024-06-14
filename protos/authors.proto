@@ -7,19 +7,24 @@ package protos;
 import "users.proto";
 
 service AuthorService {
-    rpc CreateAuthor(Author) returns (Void) {}
-    rpc UpdateAuthor(Author) returns(Void){}
+    rpc CreateAuthor(AuthorReqr) returns (Void) {}
+    rpc UpdateAuthor(AuthorReq) returns(Void){}
     rpc DeleteAuthor(ById) returns (Void) {}
-    rpc GetByIdAuthor(ById) returns (Author) {}
-    rpc GetAllAuthors(Author) returns (AllAuthors){}
+    rpc GetByIdAuthor(ById) returns (AuthorRes) {}
+    rpc GetAllAuthors(AuthorReq) returns (AllAuthors){}
 }
 
-message Author {
+message AuthorReq {
+    string name      = 2;
+    string biography = 3;
+}
+
+message AuthorRes {
     string id        = 1;
     string name      = 2;
     string biography = 3;
 }
 
 message AllAuthors {
-    repeated Author authors = 1;
+    repeated AuthorRes authors = 1;
 }

@@ -6,6 +6,7 @@ package protos;
 
 import "users.proto";
 import "authors.proto";
+import "genres.proto";
 
 service BookService {
     rpc CreateBook(BookReq) returns (Void) {}
@@ -26,7 +27,7 @@ message BookRes {
     string    id      = 1;
     string    title   = 2;
     AuthorRes author  = 3;
-    string    genre   = 4; 
+    Genre     genre   = 4; 
     string    summary = 5;
 }
 

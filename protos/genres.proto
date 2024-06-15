@@ -6,19 +6,19 @@ package protos;
 
 import "users.proto";
 
-service GenderService {
-    rpc CreateGender(Gender) returns (Void) {}
-    rpc UpdateGender(Gender) returns(Void){}
-    rpc DeleteGender(ById) returns (Void) {}
-    rpc GetByIdGender(ById) returns (Gender) {}
-    rpc GetAllGenders(Gender) returns (AllGenders){}
+service GenreService {
+    rpc CreateGenre(Genre) returns (Void) {}
+    rpc UpdateGenre(Genre) returns(Void){}
+    rpc DeleteGenre(ById) returns (Void) {}
+    rpc GetByIdGenre(ById) returns (Genre) {}
+    rpc GetAllGenres(Genre) returns (AllGenres){}
 }
 
-message Gender {
+message Genre {
     string id   = 1;
     string name = 2;
 }
 
-message AllGenders {
-    repeated Gender genders = 1;
+message AllGenres {
+    repeated Genre Genres = 1;
 }

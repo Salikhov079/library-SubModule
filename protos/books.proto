@@ -10,7 +10,7 @@ import "genres.proto";
 
 service BookService {
     rpc CreateBook(BookReq) returns (Void) {}
-    rpc UpdateBook(BookRes) returns(Void){}
+    rpc UpdateBook(BookReq) returns(Void){}
     rpc DeleteBook(ById) returns (Void) {}
     rpc GetByIdBook(ById) returns (BookRes) {}
     rpc GetAllBooks(BookReq) returns (AllBooks){}

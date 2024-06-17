@@ -14,6 +14,7 @@ service BorrowerService {
     rpc DeleteBorrower(ById) returns (Void) {}
     rpc GetByIdBorrower(ById) returns (BorrowerRes) {}
     rpc GetAllBorrowers(BorrowerReq) returns (AllBorrowers){}
+    rpc GetAllIdBorrowers(Void) returns (AllBorrowers) {}
 }
 
 message BorrowerReq {

@@ -36,7 +36,8 @@ message AllBorrowers {
     repeated BorrowerRes borrowers = 1;
 }
 
-message FilterBorrower {
-    string borrow_date = 1; 
-    string return_date = 2;
+message FilterBorrower {    
+    string user_id     = 1;
+    string borrow_date = 2; 
+    string return_date = 3;
 }

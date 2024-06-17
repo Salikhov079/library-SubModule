@@ -11,7 +11,7 @@ service AuthorService {
     rpc UpdateAuthor(AuthorRes) returns(Void){}
     rpc DeleteAuthor(ById) returns (Void) {}
     rpc GetByIdAuthor(ById) returns (AuthorRes) {}
-    rpc GetAllAuthors(AuthorReq) returns (AllAuthors){}
+    rpc GetAllAuthors(FilterAuthor) returns (AllAuthors){}
 }
 
 message AuthorReq {

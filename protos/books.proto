@@ -36,6 +36,8 @@ message AllBooks {
 }
 
 message FilterBook {
-    string title       = 1;
-    string author_name = 2;
+    string author_id   = 1;
+    string genre_id    = 2; 
+    string title       = 3;
+    string author_name = 4;
 }

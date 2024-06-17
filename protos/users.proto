@@ -5,11 +5,12 @@ option go_package = "genprotos/";
 package protos;
 
 service UserService {
-    rpc CreateUser(UserReq) returns (Void) {}
+    rpc RegisterUser(UserReq) returns (Void) {}
     rpc UpdateUser(UserRes) returns (Void) {}
     rpc DeleteUser(ById) returns (Void) {}
     rpc GetByIdUser(ById) returns (UserRes) {}
     rpc GetAllUsers(UserReq) returns (AllUsers) {}
+    rpc LoginUser(UserReq) returns (UserRes) {}
     rpc GetAllIdUsers(Void) returns (AllUsers) {}
 }
 

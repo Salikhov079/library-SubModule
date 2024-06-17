@@ -13,7 +13,7 @@ service BookService {
     rpc UpdateBook(BookRes) returns(Void){}
     rpc DeleteBook(ById) returns (Void) {}
     rpc GetByIdBook(ById) returns (BookRes) {}
-    rpc GetAllBooks(BookReq) returns (AllBooks){}
+    rpc GetAllBooks(FilterBook) returns (AllBooks){}
 }
 
 message BookReq {
@@ -33,4 +33,9 @@ message BookRes {
 
 message AllBooks {
     repeated BookRes books = 1;
+}
+
+message FilterBook {
+    string title       = 1;
+    string author_name = 2;
 }

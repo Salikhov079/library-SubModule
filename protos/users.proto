@@ -10,7 +10,7 @@ service UserService {
     rpc DeleteUser(ById) returns (Void) {}
     rpc GetByIdUser(ById) returns (UserRes) {}
     rpc GetAllUsers(UserReq) returns (AllUsers) {}
-    rpc GetAllIdBorrowers(Void) returns (AllUsers) {}
+    rpc GetAllIdUsers(Void) returns (AllUsers) {}
 }
 
 message ById {

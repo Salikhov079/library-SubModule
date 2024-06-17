@@ -40,4 +40,5 @@ message FilterBorrower {
     string user_id     = 1;
     string borrow_date = 2; 
     string return_date = 3;
+    string deleted_at  = 4;
 }

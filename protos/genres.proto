@@ -8,10 +8,10 @@ import "users.proto";
 
 service GenreService {
     rpc CreateGenre(Genre) returns (Void) {}
-    rpc UpdateGenre(Genre) returns(Void){}
+    rpc UpdateGenre(Genre) returns(Void) {}
     rpc DeleteGenre(ById) returns (Void) {}
     rpc GetByIdGenre(ById) returns (Genre) {}
-    rpc GetAllGenres(FilterGenre) returns (AllGenres){}
+    rpc GetAllGenres(FilterGenre) returns (AllGenres) {}
 }
 
 message Genre {

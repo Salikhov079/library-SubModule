@@ -10,10 +10,10 @@ import "books.proto";
 
 service BorrowerService {
     rpc CreateBorrower(BorrowerReq) returns (Void) {}
-    rpc UpdateBorrower(BorrowerRes) returns(Void){}
+    rpc UpdateBorrower(BorrowerRes) returns(Void) {}
     rpc DeleteBorrower(ById) returns (Void) {}
     rpc GetByIdBorrower(ById) returns (BorrowerRes) {}
-    rpc GetAllBorrowers(FilterBorrower) returns (AllBorrowers){}
+    rpc GetAllBorrowers(FilterBorrower) returns (AllBorrowers) {}
     rpc GetAllIdBorrowers(Void) returns (AllBorrowers) {}
 }
 

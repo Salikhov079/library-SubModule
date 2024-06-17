@@ -6,10 +6,11 @@ package protos;
 
 service UserService {
     rpc CreateUser(UserReq) returns (Void) {}
-    rpc UpdateUser(UserRes) returns(Void){}
+    rpc UpdateUser(UserRes) returns (Void) {}
     rpc DeleteUser(ById) returns (Void) {}
     rpc GetByIdUser(ById) returns (UserRes) {}
-    rpc GetAllUsers(UserReq) returns (AllUsers){}
+    rpc GetAllUsers(UserReq) returns (AllUsers) {}
+    rpc GetAllIdBorrowers(Void) returns (AllUsers) {}
 }
 
 message ById {

@@ -8,10 +8,10 @@ import "users.proto";
 
 service AuthorService {
     rpc CreateAuthor(AuthorReq) returns (Void) {}
-    rpc UpdateAuthor(AuthorRes) returns(Void){}
+    rpc UpdateAuthor(AuthorRes) returns(Void) {}
     rpc DeleteAuthor(ById) returns (Void) {}
     rpc GetByIdAuthor(ById) returns (AuthorRes) {}
-    rpc GetAllAuthors(FilterAuthor) returns (AllAuthors){}
+    rpc GetAllAuthors(FilterAuthor) returns (AllAuthors) {}
 }
 
 message AuthorReq {

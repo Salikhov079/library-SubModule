@@ -13,7 +13,7 @@ service BorrowerService {
     rpc UpdateBorrower(BorrowerRes) returns(Void){}
     rpc DeleteBorrower(ById) returns (Void) {}
     rpc GetByIdBorrower(ById) returns (BorrowerRes) {}
-    rpc GetAllBorrowers(BorrowerReq) returns (AllBorrowers){}
+    rpc GetAllBorrowers(FilterBorrower) returns (AllBorrowers){}
     rpc GetAllIdBorrowers(Void) returns (AllBorrowers) {}
 }
 
@@ -34,4 +34,9 @@ message BorrowerRes {
 
 message AllBorrowers {
     repeated BorrowerRes borrowers = 1;
+}
+
+message FilterBorrower {
+    string borrow_date = 1; 
+    string return_date = 2;
 }

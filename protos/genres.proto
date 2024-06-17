@@ -11,7 +11,7 @@ service GenreService {
     rpc UpdateGenre(Genre) returns(Void){}
     rpc DeleteGenre(ById) returns (Void) {}
     rpc GetByIdGenre(ById) returns (Genre) {}
-    rpc GetAllGenres(Genre) returns (AllGenres){}
+    rpc GetAllGenres(FilterGenre) returns (AllGenres){}
 }
 
 message Genre {
@@ -21,4 +21,8 @@ message Genre {
 
 message AllGenres {
     repeated Genre Genres = 1;
+}
+
+message FilterGenre {
+    string name = 1;
 }

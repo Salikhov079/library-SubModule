@@ -28,3 +28,7 @@ message AuthorRes {
 message AllAuthors {
     repeated AuthorRes authors = 1;
 }
+
+message FilterAuthor {
+    string name = 1; 
+}
